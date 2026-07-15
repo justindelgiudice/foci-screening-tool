@@ -20,7 +20,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from sources.usaspending_source import get_awards
-from sources.sanctions_source import get_sanctions_list
+from sources.sanctions_source import get_sanctions_list, get_address_countries
 from aggregator import build_contractor_profiles
 from risk_engine import score_all
 from report import render_full_report
@@ -29,9 +29,10 @@ from report import render_full_report
 def run(mode: str = "demo"):
     awards = get_awards(mode=mode)
     sanctions_entries = get_sanctions_list(mode=mode)
+    address_countries_by_ent = get_address_countries(mode=mode)
 
     contractors = build_contractor_profiles(awards)
-    scored = score_all(contractors, sanctions_entries)
+    scored = score_all(contractors, sanctions_entries, address_countries_by_ent)
     # Sort highest risk first so the most important findings are on top.
     scored.sort(key=lambda sc: sc.risk_score, reverse=True)
 

@@ -1,0 +1,2 @@
+ent_num,add_num,address,city_state_province_postal_code,country,add_remarks
+9001,1,12 Fictional Prospekt,Moscow 101000,Russia,FICTIONAL DEMO ENTRY -- not a real OFAC address record. Demonstrates the ADD.CSV join surfacing a country-of-concern.

@@ -35,7 +35,9 @@ def render_contractor_report(scored) -> str:
 
     if scored.sanctions_match is not None:
         m = scored.sanctions_match
+        concern_flag = " [COUNTRY OF CONCERN]" if m.country.is_country_of_concern else ""
         lines.append("-" * _BAR_WIDTH)
+        lines.append(f"MATCHED ENTITY COUNTRY: {m.country.display}{concern_flag}")
         lines.append(
             f"SANCTIONS MATCH DETAIL: entity='{m.matched_entity_name}'   "
             f"list/program='{m.matched_entity_program}'   "
@@ -47,6 +49,8 @@ def render_contractor_report(scored) -> str:
     lines.append(f"RISK SCORE: {scored.risk_score}/100   [{_score_bar(scored.risk_score)}]")
     flag = _FLAG.get(scored.recommendation, scored.recommendation)
     lines.append(f"RECOMMENDATION: {flag} {scored.recommendation}")
+    if scored.headline_reason:
+        lines.append(f"REASON: {scored.headline_reason}")
 
     if scored.findings:
         lines.append("-" * _BAR_WIDTH)

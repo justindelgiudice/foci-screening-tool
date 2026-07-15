@@ -50,7 +50,7 @@ def _record_to_award(record: dict) -> ContractAward:
         award_id=record.get("Award ID", ""),
         recipient_name=record.get("Recipient Name", "").strip(),
         award_amount=float(record.get("Award Amount", 0) or 0),
-        naics_code=str(record.get("NAICS Code", "")).strip(),
+        naics_code=str(record.get("NAICS Code") or "").strip(),
         naics_description=record.get("NAICS Description", ""),
         awarding_sub_agency=record.get("Awarding Sub Agency", ""),
         start_date=record.get("Start Date", ""),

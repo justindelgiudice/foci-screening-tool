@@ -29,5 +29,6 @@ def build_contractor_profiles(awards: list) -> list:
             naics_descriptions=naics_descriptions,
             largest_award_value=largest,
             awarding_sub_agencies=sub_agencies,
+            awards=recipient_awards,
         ))
     return profiles
