@@ -1,0 +1,79 @@
+[
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- not a real, current USAspending.gov record. Fields match the real API schema so the pipeline is a drop-in replacement for fetch_live_dod_awards().",
+    "Award ID": "FA8620-24-C-0001",
+    "Recipient Name": "STERLING AEROSPACE DYNAMICS INC",
+    "Award Amount": 48500000,
+    "NAICS Code": "336411",
+    "NAICS Description": "Aircraft Manufacturing",
+    "Awarding Sub Agency": "Department of the Air Force",
+    "Start Date": "2024-01-15",
+    "End Date": "2026-01-14"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE",
+    "Award ID": "FA8620-24-C-0002",
+    "Recipient Name": "STERLING AEROSPACE DYNAMICS INC",
+    "Award Amount": 12300000,
+    "NAICS Code": "336411",
+    "NAICS Description": "Aircraft Manufacturing",
+    "Awarding Sub Agency": "Department of the Air Force",
+    "Start Date": "2024-06-01",
+    "End Date": "2025-05-31"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- name deliberately close to a demo sanctions entry to exercise the fuzzy matcher",
+    "Award ID": "N00019-23-C-0045",
+    "Recipient Name": "VANTAGE PRECISION SYSTEMS INC",
+    "Award Amount": 8750000,
+    "NAICS Code": "334511",
+    "NAICS Description": "Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",
+    "Awarding Sub Agency": "Department of the Navy",
+    "Start Date": "2023-09-01",
+    "End Date": "2025-08-31"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- name is a moderate (not exact) fuzzy match to a demo sanctions entry",
+    "Award ID": "W911NF-24-C-0110",
+    "Recipient Name": "HORIZON GUIDANCE TECHNOLOGIES INC",
+    "Award Amount": 5600000,
+    "NAICS Code": "334511",
+    "NAICS Description": "Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",
+    "Awarding Sub Agency": "Department of the Army",
+    "Start Date": "2024-02-01",
+    "End Date": "2026-01-31"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- single-award dependency case, non-sensitive NAICS, no sanctions hit",
+    "Award ID": "SPE7L1-24-D-0089",
+    "Recipient Name": "CASCADE DEFENSE SOLUTIONS LLC",
+    "Award Amount": 3200000,
+    "NAICS Code": "336413",
+    "NAICS Description": "Other Aircraft Parts and Auxiliary Equipment Manufacturing",
+    "Awarding Sub Agency": "Defense Logistics Agency",
+    "Start Date": "2024-03-01",
+    "End Date": "2025-02-28"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- sensitive-tech NAICS #1 of 2 for this recipient",
+    "Award ID": "FA8750-24-C-0021",
+    "Recipient Name": "MERIDIAN PHOTONICS GROUP INC",
+    "Award Amount": 6100000,
+    "NAICS Code": "334413",
+    "NAICS Description": "Semiconductor and Related Device Manufacturing",
+    "Awarding Sub Agency": "Defense Advanced Research Projects Agency",
+    "Start Date": "2024-04-01",
+    "End Date": "2026-03-31"
+  },
+  {
+    "_demo_note": "FICTIONAL/ILLUSTRATIVE -- sensitive-tech NAICS #2 of 2 for this recipient (triggers multi-sensitive-NAICS flag)",
+    "Award ID": "FA8750-24-C-0022",
+    "Recipient Name": "MERIDIAN PHOTONICS GROUP INC",
+    "Award Amount": 900000,
+    "NAICS Code": "541715",
+    "NAICS Description": "Research and Development in the Physical, Engineering, and Life Sciences",
+    "Awarding Sub Agency": "Defense Advanced Research Projects Agency",
+    "Start Date": "2024-05-01",
+    "End Date": "2025-04-30"
+  }
+]

@@ -1,0 +1,5 @@
+ent_num,sdn_name,sdn_type,sdn_program,remarks
+9001,VANTAGE PRECISION SYSTEMS LTD,entity,DEMO-PROGRAM,FICTIONAL DEMO ENTRY -- not a real OFAC designation. Illustrates a renamed/rebranded entity re-entering the defense supply chain under a near-identical name.
+9002,HORIZON GUIDANCE TECH LLC,entity,DEMO-PROGRAM,FICTIONAL DEMO ENTRY -- not a real OFAC designation. Illustrates a subsidiary name variant (Tech vs Technologies; LLC vs Inc).
+9003,BALTIC STEEL FOUNDRY JSC,entity,DEMO-PROGRAM,FICTIONAL DEMO ENTRY -- not a real OFAC designation. Included as a clearly unrelated name to validate the matcher does not produce false positives.
+9004,NORDHOLM PRECISION TRADING LTD,entity,DEMO-PROGRAM,FICTIONAL DEMO ENTRY -- not a real OFAC designation. Included as a clearly unrelated name to validate the matcher does not produce false positives.
